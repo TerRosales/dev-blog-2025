@@ -4,7 +4,7 @@ import profileDefault from "@/assets/images/profile.jpg";
 import logo from "@/assets/images/logo.jpg";
 const Navbar = () => {
   return (
-    <nav className="bg-blue-700 border-b border-blue-500">
+    <nav className="bg-gradient-to-bl from-cyan-200 to-cyan-500 border-b border-cyan-200">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-20 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
@@ -39,12 +39,13 @@ const Navbar = () => {
             {/* <!-- Logo --> */}
             <Link
               className="flex flex-shrink-0 items-center"
-              href="/index.html"
+              href="/"
             >
               <Image
                 className="h-10 w-auto"
+                priority
                 src={logo}
-                alt="PropertyPulse"
+                alt="Blog Logo"
                 width={150}
                 height={150}
               />
@@ -57,22 +58,22 @@ const Navbar = () => {
             <div className="hidden md:ml-6 md:block">
               <div className="flex space-x-2">
                 <Link
-                  href="/index.html"
-                  className="text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
+                  href="/"
+                  className="text-black hover:text-white bg-white border-red-400  hover:bg-red-400 hover:border-neutral-200 rounded-md px-3 py-2"
                 >
                   Home
                 </Link>
                 <Link
-                  href="/properties.html"
+                  href="/blogs"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                 >
-                  Properties
+                  Blogs
                 </Link>
                 <Link
-                  href="/add-property.html"
+                  href="#"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                 >
-                  Add Property
+                  Add Blog
                 </Link>
               </div>
             </div>
@@ -90,7 +91,7 @@ const Navbar = () => {
 
           {/* <!-- Right Side Menu (Logged In) --> */}
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
-            <Link href="messages.html" className="relative group">
+            <Link href="#" className="relative group">
               <button
                 type="button"
                 className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -146,22 +147,22 @@ const Navbar = () => {
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="user-menu-button"
-                tabindex="-1"
+                tabIndex="-1"
               >
                 <Link
-                  href="/profile.html"
+                  href="/profile"
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
-                  tabindex="-1"
+                  tabIndex="-1"
                   id="user-menu-item-0"
                 >
                   Your Profile
                 </Link>
                 <Link
-                  href="saved-properties.html"
+                  href="#"
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
-                  tabindex="-1"
+                  tabIndex="-1"
                   id="user-menu-item-2"
                 >
                   Saved Properties
@@ -170,7 +171,7 @@ const Navbar = () => {
                   href="#"
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
-                  tabindex="-1"
+                  tabIndex="-1"
                   id="user-menu-item-2"
                 >
                   Sign Out
@@ -185,22 +186,22 @@ const Navbar = () => {
       <div className="hidden" id="mobile-menu">
         <div className="space-y-1 px-2 pb-3 pt-2">
           <Link
-            href="/index.html"
+            href="/"
             className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Home
           </Link>
           <Link
-            href="/properties.html"
+            href="/blogs"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Properties
           </Link>
           <Link
-            href="/add-property.html"
+            href="/add"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
-            Add Property
+            Add Blog
           </Link>
           <button className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-4">
             <i className="fa-brands fa-google mr-2"></i>
